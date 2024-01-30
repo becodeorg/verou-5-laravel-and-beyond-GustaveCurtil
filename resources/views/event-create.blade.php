@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/style.css">
-    <title>FUfbCK</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Intentionz</title>
 </head>
 <body>
     <header>
-        <h1><a href="/">FUfbCK</a></h1>
+        <h1><a href="/">Intentionz</a></h1>
         <a href="/account">Account</a>
     </header>
     <main>
+        <h2>Create event</h2>
         <form action="create-event/create" method="post">
             @csrf
             <label for="date">Date</label>

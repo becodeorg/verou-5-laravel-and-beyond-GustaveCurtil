@@ -30,6 +30,6 @@ Route::post('/account/logout', [UserController::class, 'logout']);
 
 //ACCOUNT EVENT SYSTEM
 Route::get('/account/edit-event/{event}', [NavigationController::class, 'goToEventEdit']);
-Route::put('/account/edit-event/{event}/edit', [EventController::class, 'editEvent']);
+Route::put('/account/edit-event/{event}', [EventController::class, 'editEvent']);
 Route::delete('/account/delete-event/{event}', [EventController::class, 'deleteEvent']);
 

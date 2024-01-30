@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
-    <title>FUfbCK</title>
+    <title>Intentionz</title>
 </head>
 <body>
     @auth
     <header>
-        <h1><a href="/">FUfbCK</a></h1>
+        <h1><a href="/">Intentionz</a></h1>
         <a href="/account">Account</a>
     </header>
     <main>
@@ -36,7 +36,7 @@
     @else
 
     <header>
-        <h1><a href="/">FUfbCK</a></h1>
+        <h1><a href="/">Intentionz</a></h1>
     </header>
     <main>
         <h2>Login</h2>
@@ -49,6 +49,7 @@
             <button>Login</button>
         </form>
         <h2>Create account - it's free and always will be!</h2>
+        <p>Thanks mr. zuckerberg... thanks... </p>
         <form action="/account/create" method="post">
             @csrf
             <label for="name">Username</label>
