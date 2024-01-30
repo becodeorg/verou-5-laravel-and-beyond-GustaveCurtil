@@ -18,7 +18,7 @@
                     <li>
                         <strong>Date:</strong> {{ $event->date ?? 'N/A' }}<br>
                         <strong>Time:</strong> {{ $event->time ?? 'N/A' }}<br>
-                        <strong>Title:</strong> {{ $event->title }}<br>
+                        <strong>Title:</strong> {{ $event->title }} by {{$event->user->name}}<br>
                         <strong>Description:</strong> {{ $event->description }}<br>
                         <hr>
                     </li>

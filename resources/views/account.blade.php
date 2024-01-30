@@ -19,7 +19,7 @@
         @foreach ($events as $event)
             <p>{{$event->title}}</p>
             <p><a href="account/edit-event/{{$event->id}}">Edit</a></p>
-            <form action="/account/delete-event" method="POST">
+            <form action="/account/delete-event/{{$event->id}}" method="POST">
                 @csrf   
                 @method('DELETE')
                 <button>Delete</button>
@@ -49,7 +49,7 @@
             <button>Login</button>
         </form>
         <h2>Create account - it's free and always will be!</h2>
-        <p>Thanks mr. zuckerberg... thanks... </p>
+        <p>Thanks mr. zuckerberg... thanks... 🖕</p>
         <form action="/account/create" method="post">
             @csrf
             <label for="name">Username</label>

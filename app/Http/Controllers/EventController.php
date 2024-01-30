@@ -16,7 +16,7 @@ class EventController extends Controller
         ]);
 
         $inputs['title'] = strip_tags($inputs['title']); //tegen lastige injecties enzu
-        $inputs['description'] = strip_tags($inputs['desctription']);
+        $inputs['description'] = strip_tags($inputs['description']);
         $inputs['user_id'] = auth()->id();
 
         Event::create($inputs);
@@ -40,7 +40,9 @@ class EventController extends Controller
         return redirect('/account');
     }
 
-    public function deleteEvent($id) {
-        return $id;
+    public function deleteEvent(Event $event) {
+
+        $event->delete();
+        return redirect('/account');
     }
 }
