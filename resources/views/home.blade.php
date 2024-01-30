@@ -24,7 +24,7 @@
             </ul>
         </main>
         <footer>
-            <a href="/add-event">Create an event</a>
+            <a href="/create-event">Create an event</a>
         </footer>
     </body>
 </html>

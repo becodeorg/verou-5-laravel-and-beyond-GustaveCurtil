@@ -17,7 +17,7 @@ use App\Http\Controllers\NavigationController;
 */
 
 Route::get('/', [NavigationController::class, 'goToHome']);
-Route::get('/add-event', [NavigationController::class, 'goToEventform']);
+Route::get('/create-event', [NavigationController::class, 'goToEventform']);
 Route::get('/account', [NavigationController::class, 'goToAccount']);
 
 

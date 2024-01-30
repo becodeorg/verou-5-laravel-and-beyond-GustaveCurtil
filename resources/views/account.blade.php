@@ -17,6 +17,7 @@
         @csrf
         <button>Log out</button>
         </form>
+        <a href="/create-event">Create an event</a>
         @else
 
         <h2>Login</h2>

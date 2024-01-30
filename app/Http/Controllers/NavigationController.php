@@ -14,6 +14,10 @@ class NavigationController extends Controller
     }
 
     public function goToEventform() {
+        if (auth()->check() == false) {
+            return redirect(('/account'));
+        } 
+
         return view('/eventform');
     }
 
