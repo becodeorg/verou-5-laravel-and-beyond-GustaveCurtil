@@ -1,1 +1,2 @@
-# verou-5-laravel-and-beyond-GustaveCurtil
+# Foto library / blog for fries
+
