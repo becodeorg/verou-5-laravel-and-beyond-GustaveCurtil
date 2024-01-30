@@ -4,22 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <title>FUfbCK</title>
 </head>
 <body>
+    @auth
+    <header>
+        <h1><a href="/">FUfbCK</a></h1>
+        <form action="/account/logout" method="post">
+            @csrf
+            <button>Log out</button>
+        </form>
+    </header>
+    <main>
+        <a href="/create-event">Create an event</a>
+        <h2>Your events</h2>
+    </main>
+
+    @else
+
     <header>
         <h1><a href="/">FUfbCK</a></h1>
     </header>
     <main>
-        @auth
-        <p>Logged in</p>
-        <form action="/account/logout" method="post">
-        @csrf
-        <button>Log out</button>
-        </form>
-        <a href="/create-event">Create an event</a>
-        @else
-
         <h2>Login</h2>
         <form action="/account/login" method="post">
             @csrf
@@ -40,8 +47,9 @@
             <input type="password" name="password-check" id="password-check" required>
             <button>Create account</button>
         </form>
+    </main>
 
         @endauth
-    </main>
+
 </body>
 </html>
