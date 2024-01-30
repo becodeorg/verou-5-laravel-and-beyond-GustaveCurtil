@@ -24,6 +24,7 @@ Route::get('/account', [NavigationController::class, 'goToAccount']);
 Route::post('/add-event', [EventController::class, 'create']);
 
 //ACCOUNT 
-Route::post('/account/login', [UserController::class, 'login']);
 Route::post('/account/create', [UserController::class, 'createAccount']);
+Route::post('/account/login', [UserController::class, 'login']);
+Route::post('/account/logout', [UserController::class, 'logout']);
 

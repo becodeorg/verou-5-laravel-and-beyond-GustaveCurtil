@@ -12,9 +12,11 @@
     </header>
     <main>
         @auth
-    
         <p>Logged in</p>
-
+        <form action="/account/logout" method="post">
+        @csrf
+        <button>Log out</button>
+        </form>
         @else
 
         <h2>Login</h2>
