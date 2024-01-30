@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\NavigationController;
 
@@ -16,7 +17,13 @@ use App\Http\Controllers\NavigationController;
 */
 
 Route::get('/', [NavigationController::class, 'goToHome']);
-Route::get('/eventform', [NavigationController::class, 'goToEventform']);
+Route::get('/add-event', [NavigationController::class, 'goToEventform']);
+Route::get('/account', [NavigationController::class, 'goToAccount']);
 
 
 Route::post('/add-event', [EventController::class, 'create']);
+
+//ACCOUNT 
+Route::post('/account/login', [UserController::class, 'login']);
+Route::post('/account/create', [UserController::class, 'createAccount']);
+

@@ -9,6 +9,7 @@
 <body>
     <header>
         <h1><a href="/">FUfbCK</a></h1>
+        <a href="/account">Account</a>
     </header>
     <main>
         <form action="/add-event" method="post">

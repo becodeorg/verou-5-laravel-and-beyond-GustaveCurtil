@@ -8,6 +8,7 @@
     <body>
         <header>
             <h1><a href="/">FUfbCK</a></h1>
+            <a href="/account">Account</a>
         </header>
         <main>
             <ul>
@@ -23,7 +24,7 @@
             </ul>
         </main>
         <footer>
-            <a href="/eventform">Create an event</a>
+            <a href="/add-event">Create an event</a>
         </footer>
     </body>
 </html>

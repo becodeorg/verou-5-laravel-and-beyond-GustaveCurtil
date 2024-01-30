@@ -16,4 +16,8 @@ class NavigationController extends Controller
     public function goToEventform() {
         return view('/eventform');
     }
+
+    public function goToAccount() {
+        return view('/account');
+    }
 }
