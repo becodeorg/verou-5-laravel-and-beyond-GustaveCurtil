@@ -21,7 +21,7 @@ Route::get('/create-event', [NavigationController::class, 'goToEventform']);
 Route::get('/account', [NavigationController::class, 'goToAccount']);
 
 
-Route::post('/add-event', [EventController::class, 'create']);
+Route::post('/create-event/add-event', [EventController::class, 'createEvent']);
 
 //ACCOUNT 
 Route::post('/account/create', [UserController::class, 'createAccount']);

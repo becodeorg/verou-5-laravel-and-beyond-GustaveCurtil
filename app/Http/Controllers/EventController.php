@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class EventController extends Controller
 {
-    public function create(Request $request) {
+    public function createEvent(Request $request) {
 
         Event::create([
             'date' => $request->date,

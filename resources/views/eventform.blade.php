@@ -11,9 +11,13 @@
     <header>
         <h1><a href="/">FUfbCK</a></h1>
         <a href="/account">Account</a>
+        <form action="/account/logout" method="post">
+            @csrf
+            <button>Log out</button>
+        </form>
     </header>
     <main>
-        <form action="/create-event" method="post">
+        <form action="create-event/add-event" method="post">
             @csrf
             <label for="date">Date</label>
             <input type="date" name="date" id="date" required>

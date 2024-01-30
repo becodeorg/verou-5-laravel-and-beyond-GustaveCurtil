@@ -10,8 +10,15 @@
         <header>
             <h1><a href="/">FUfbCK</a></h1>
             <a href="/account">Account</a>
+            @auth
+            <form action="/account/logout" method="post">
+                @csrf
+                <button>Log out</button>
+            </form>  
+            @endauth
         </header>
         <main>
+            <a href="/create-event">Create an event</a>
             <ul>
                 @foreach ($events as $event)
                     <li>
@@ -24,8 +31,5 @@
                 @endforeach
             </ul>
         </main>
-        <footer>
-            <a href="/create-event">Create an event</a>
-        </footer>
     </body>
 </html>
