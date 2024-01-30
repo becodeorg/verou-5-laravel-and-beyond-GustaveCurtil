@@ -21,4 +21,12 @@ class EventController extends Controller
 
         return redirect("/");
     }
+
+    public function editEvent(Event $event) {
+        return $event;
+    }
+
+    public function deleteEvent($id) {
+        return $id;
+    }
 }

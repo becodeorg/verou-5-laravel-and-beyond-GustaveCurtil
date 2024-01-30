@@ -17,14 +17,19 @@ use App\Http\Controllers\NavigationController;
 */
 
 Route::get('/', [NavigationController::class, 'goToHome']);
-Route::get('/create-event', [NavigationController::class, 'goToEventform']);
+Route::get('/create-event', [NavigationController::class, 'goToEventCreate']);
 Route::get('/account', [NavigationController::class, 'goToAccount']);
 
 
-Route::post('/create-event/add-event', [EventController::class, 'createEvent']);
+Route::post('/create-event/create', [EventController::class, 'createEvent']);
 
-//ACCOUNT 
+//ACCOUNT LOG SYSTEM
 Route::post('/account/create', [UserController::class, 'createAccount']);
 Route::post('/account/login', [UserController::class, 'login']);
 Route::post('/account/logout', [UserController::class, 'logout']);
+
+//ACCOUNT EVENT SYSTEM
+Route::get('/account/edit-event/{event}', [NavigationController::class, 'goToEventEdit']);
+Route::put('/account/edit-event/{event}/edit', [EventController::class, 'editEvent']);
+Route::delete('/account/delete-event/{event}', [EventController::class, 'deleteEvent']);
 

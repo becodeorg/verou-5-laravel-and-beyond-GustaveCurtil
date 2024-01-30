@@ -17,7 +17,13 @@
         <a href="/create-event">Create an event</a>
         <h2>Your events</h2>
         @foreach ($events as $event)
-            <p>{{$event['title']}}</p>
+            <p>{{$event->title}}</p>
+            <p><a href="account/edit-event/{{$event->id}}">Edit</a></p>
+            <form action="/account/delete-event" method="POST">
+                @csrf   
+                @method('DELETE')
+                <button>Delete</button>
+            </form>
         @endforeach
     </main>
     <footer>

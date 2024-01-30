@@ -5,7 +5,7 @@
 1. Option to log in ✓
 2. Create events when logged in. ✓
 3. Home page with all the (public) events. ✓
-4. Display your events in your personal page. 
+4. Display your events in your personal page. ✓
 5. Edit/delete your event.
 
 EXTRA: Some styling.

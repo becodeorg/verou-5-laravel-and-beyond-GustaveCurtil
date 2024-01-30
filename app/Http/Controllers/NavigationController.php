@@ -13,16 +13,24 @@ class NavigationController extends Controller
         return view('/home', ['events' => $events]);
     }
 
-    public function goToEventform() {
+    public function goToEventCreate() {
         if (auth()->check() == false) {
             return redirect(('/account'));
         } 
 
-        return view('/eventform');
+        return view('/event-create');
     }
 
     public function goToAccount() {
         $events = Event::where('user_id', auth()->id())->get();
         return view('/account', ['events' => $events]);
+    }
+
+    public function goToEventEdit(Event $event) {
+        if (auth()->check() == false) {
+            return redirect(('/account'));
+        } 
+
+        return view('/event-edit', ['event' => $event]);
     }
 }

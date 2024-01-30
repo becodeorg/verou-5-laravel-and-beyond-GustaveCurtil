@@ -13,7 +13,7 @@
         <a href="/account">Account</a>
     </header>
     <main>
-        <form action="create-event/add-event" method="post">
+        <form action="create-event/create" method="post">
             @csrf
             <label for="date">Date</label>
             <input type="date" name="date" id="date" required>
