@@ -11,15 +11,21 @@
     @auth
     <header>
         <h1><a href="/">FUfbCK</a></h1>
-        <form action="/account/logout" method="post">
-            @csrf
-            <button>Log out</button>
-        </form>
+        <a href="/account">Account</a>
     </header>
     <main>
         <a href="/create-event">Create an event</a>
         <h2>Your events</h2>
+        @foreach ($events as $event)
+            <p>{{$event['title']}}</p>
+        @endforeach
     </main>
+    <footer>
+        <form action="/account/logout" method="post">
+            @csrf
+            <button>Log out</button>
+        </form>
+    </footer>
 
     @else
 

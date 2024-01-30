@@ -11,10 +11,6 @@
     <header>
         <h1><a href="/">FUfbCK</a></h1>
         <a href="/account">Account</a>
-        <form action="/account/logout" method="post">
-            @csrf
-            <button>Log out</button>
-        </form>
     </header>
     <main>
         <form action="create-event/add-event" method="post">
@@ -30,5 +26,11 @@
             <button>Create event</button>
         </form>
     </main>
+    <footer>
+        <form action="/account/logout" method="post">
+            @csrf
+            <button>Log out</button>
+        </form>
+    </footer>
 </body>
 </html>

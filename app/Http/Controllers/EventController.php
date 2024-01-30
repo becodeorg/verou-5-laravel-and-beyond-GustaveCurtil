@@ -8,13 +8,16 @@ use Illuminate\Http\Request;
 class EventController extends Controller
 {
     public function createEvent(Request $request) {
-
-        Event::create([
-            'date' => $request->date,
-            'time' => $request->time,
-            'title' => $request->title,
-            'description' => $request->description,
+        $inputs = $request->validate([
+            'date' => 'required',
+            'time' => 'required',
+            'title' => 'required',
+            'description' => 'required',
         ]);
+
+        $inputs['user_id'] = auth()->id();
+
+        Event::create($inputs);
 
         return redirect("/");
     }

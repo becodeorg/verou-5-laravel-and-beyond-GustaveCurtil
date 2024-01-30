@@ -22,6 +22,7 @@ class NavigationController extends Controller
     }
 
     public function goToAccount() {
-        return view('/account');
+        $events = Event::where('user_id', auth()->id())->get();
+        return view('/account', ['events' => $events]);
     }
 }

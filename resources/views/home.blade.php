@@ -10,12 +10,6 @@
         <header>
             <h1><a href="/">FUfbCK</a></h1>
             <a href="/account">Account</a>
-            @auth
-            <form action="/account/logout" method="post">
-                @csrf
-                <button>Log out</button>
-            </form>  
-            @endauth
         </header>
         <main>
             <a href="/create-event">Create an event</a>
@@ -31,5 +25,13 @@
                 @endforeach
             </ul>
         </main>
+        @auth
+        <footer>
+            <form action="/account/logout" method="post">
+                @csrf
+                <button>Log out</button>
+            </form> 
+        </footer> 
+        @endauth
     </body>
 </html>
