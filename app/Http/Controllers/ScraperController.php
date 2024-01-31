@@ -32,6 +32,7 @@ class ScraperController extends Controller
 
         $titles = $xpath->evaluate('//div[@class="row"]/div/div/h1/a/span');
         $datetimes = $xpath->evaluate('//div[@class="row"]/div/div/div[@class="movieDate"]');
+        $description = $xpath->evaluate('//div[@class="row"]/div/div/h2');
         
         foreach ($titles as $key => $title) {
 
@@ -61,7 +62,7 @@ class ScraperController extends Controller
                     'date' => $formattedDate,
                     'time' => $formattedTime,
                     'title' => $title->textContent.PHP_EOL,
-                    'description' => $datetimes[$key]->textContent.PHP_EOL, 
+                    'description' => "Director(s): " . $description[$key]->textContent.PHP_EOL, 
                     'user_id' => $Kask->id, 
                     'type' => 'cinema'
                 ]);

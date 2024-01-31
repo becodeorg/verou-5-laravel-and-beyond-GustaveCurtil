@@ -12,7 +12,7 @@
     - scrape events from cinema's. (add it to the other events table + new column:'type') ✓
     - translate it into TB table (weekly) without creating doubles. ✓
     - scraping happens only once a week or something like that. (HOW?)
-    - print scraped events together with other events onto the home page.
+    - print scraped events together with other events onto the home page. ✓
 
 ## Version 2.0 (COMING SOON) 🌼
 As a user:

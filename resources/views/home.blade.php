@@ -21,6 +21,7 @@
                         <strong>Title:</strong> {{ $event->title }} by {{$event->user->name}}<br>
                         <strong>Description:</strong> {{ $event->description }}<br>
                         @auth
+                        <p>{{$user->name}}</p>
                         <form action="/save/{id}" method="post">
                             @csrf
                             @method('PUT')

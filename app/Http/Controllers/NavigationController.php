@@ -4,13 +4,23 @@ namespace App\Http\Controllers;
 
 use App\Models\Event;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Cache;
 
 class NavigationController extends Controller
 {
     public function goToHome(){
-        $events = Event::all();
+        //Indien de site voor het eerst wordt bezocht in de huidige week, dan doet ie deze WebScraping -> database (laadt wat langer). Ander gaat ie gewoon verder gelijk gewoon
+        if (!Cache::has('scheduled_task_last_run_week')) {
+            
+            app()->call([app(ScraperController::class), 'scrapeKask']);
 
-        return view('/home', ['events' => $events]);
+            Cache::put('scheduled_task_last_run_week', now()->weekOfYear, now()->endOfWeek());
+        }
+
+        $events = Event::all();
+        $user = Auth::user();
+        return view('/home', ['events' => $events, 'user' => $user]);
     }
 
     public function goToEventCreate() {

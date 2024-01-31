@@ -35,5 +35,5 @@ Route::put('/account/edit-event/{event}', [EventController::class, 'editEvent'])
 Route::delete('/account/delete-event/{event}', [EventController::class, 'deleteEvent']);
 
 //ScraperShmee
-Route::get('scraper', [ScraperController::class, 'scrapeKask']);
+// Route::get('scraper', [ScraperController::class, 'scrapeKask']);
 
