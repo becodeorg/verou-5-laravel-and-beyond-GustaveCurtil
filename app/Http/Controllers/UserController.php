@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Event;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -39,6 +41,22 @@ class UserController extends Controller
 
     public function logout() {
         auth()->logout();
+        return redirect('/');
+    }
+
+    public function saveEvent(Event $event) {
+        $user = User::find(Auth::id());
+        $saves = $user->saves ?? [];
+        if (empty($saves)) {
+            $saves = [$event->id];
+        } else {
+            array_push($saves, $event->id);
+        };
+
+        $user->saves = $saves;
+        $user->save();
+        $user->refresh();
+
         return redirect('/');
     }
 }

@@ -21,12 +21,21 @@
                         <strong>Title:</strong> {{ $event->title }} by {{$event->user->name}}<br>
                         <strong>Description:</strong> {{ $event->description }}<br>
                         @auth
-                        <p>{{$user->name}}</p>
-                        <form action="/save/{id}" method="post">
-                            @csrf
-                            @method('PUT')
-                            <button>Save event</button>
-                        </form>
+                        {{-- Check if $user->saves is not null --}}
+                        @if ($user->saves && in_array($event->id, $user->saves))
+
+                            {{-- Your logic when $event->id exists in $user->saves --}}
+                            <p>This event is saved!</p>
+
+                        @else
+
+                            <form action="/save/{{$event->id}}" method="post">
+                                @csrf
+                                @method('PUT')
+                                <button>Save event</button>
+                            </form>
+
+                        @endif
                         @endauth
                         <hr>
                     </li>

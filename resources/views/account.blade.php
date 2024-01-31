@@ -16,9 +16,9 @@
     <main>
         <a href="/create-event">Create an event</a>
         <h2>Saved events</h2>
-        {{-- @foreach ($saves as $save)
-            
-        @endforeach --}}
+        @foreach ($saves as $save)
+            <p>{{$save->title}}</p>
+        @endforeach
         <h2>Your events</h2>
         @foreach ($events as $event)
             <p>{{$event->title}}</p>

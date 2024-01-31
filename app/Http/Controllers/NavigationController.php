@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\Event;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -33,7 +34,17 @@ class NavigationController extends Controller
 
     public function goToAccount() {
         $events = Event::where('user_id', auth()->id())->get();
-        return view('/account', ['events' => $events]);
+
+        $user = User::find(Auth::id());
+        $saves = $user->saves ?? [];
+
+        $savedEvents = [];
+        foreach ($saves as $save) {
+            $event = Event::where('id', $save)->get();
+            array_push($savedEvents, $event);
+        }
+        
+        return view('/account', ['events' => $events, 'saves' => $savedEvents[0]]);
     }
 
     public function goToEventEdit(Event $event) {
