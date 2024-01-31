@@ -17,6 +17,7 @@ class EventController extends Controller
 
         $inputs['title'] = strip_tags($inputs['title']); //tegen lastige injecties enzu
         $inputs['description'] = strip_tags($inputs['description']);
+        $inputs['type'] = 'public';
         $inputs['user_id'] = auth()->id();
 
         Event::create($inputs);

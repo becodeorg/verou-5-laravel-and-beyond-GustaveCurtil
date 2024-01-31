@@ -20,6 +20,13 @@
                         <strong>Time:</strong> {{ $event->time ?? 'N/A' }}<br>
                         <strong>Title:</strong> {{ $event->title }} by {{$event->user->name}}<br>
                         <strong>Description:</strong> {{ $event->description }}<br>
+                        @auth
+                        <form action="/save/{id}" method="post">
+                            @csrf
+                            @method('PUT')
+                            <button>Save event</button>
+                        </form>
+                        @endauth
                         <hr>
                     </li>
                 @endforeach

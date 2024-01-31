@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\NavigationController;
+use App\Http\Controllers\ScraperController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,4 +33,7 @@ Route::post('/account/logout', [UserController::class, 'logout']);
 Route::get('/account/edit-event/{event}', [NavigationController::class, 'goToEventEdit']);
 Route::put('/account/edit-event/{event}', [EventController::class, 'editEvent']);
 Route::delete('/account/delete-event/{event}', [EventController::class, 'deleteEvent']);
+
+//ScraperShmee
+Route::get('scraper', [ScraperController::class, 'scrapeKask']);
 

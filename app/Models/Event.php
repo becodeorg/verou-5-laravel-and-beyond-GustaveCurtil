@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class Event extends Model
 {
 
-    protected $fillable = ['date', 'time', 'title', 'description', 'user_id'];
+    protected $fillable = ['date', 'time', 'title', 'description', 'user_id', 'type'];
     
     use HasFactory;
 
