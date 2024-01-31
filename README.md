@@ -1,6 +1,6 @@
 # Event platform for people who have no fb 💪
 
-## Version 1.0 🌱
+## Version 1.0 🌱 --> ✅
 
 1. Option to log in ✓
 2. Create events when logged in. ✓
@@ -11,7 +11,7 @@
     - find the right package + how to use it. ✓
     - scrape events from cinema's. (add it to the other events table + new column:'type') ✓
     - translate it into TB table (weekly) without creating doubles. ✓
-    - scraping happens only once a week or something like that. (HOW?)
+    - scraping happens only once a week or something like that. (HOW?) ✓
     - print scraped events together with other events onto the home page. ✓
 
 ## Version 2.0 (COMING SOON) 🌼
