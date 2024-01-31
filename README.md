@@ -9,10 +9,10 @@
 5. Edit/delete your event. ✓
 6. Scraping package:
     - find the right package + how to use it. ✓
-    - scrape events from cinema's. (add it to the other events table + new column:'type')
-    - translate it into TB table (weekly) without creating doubles.
+    - scrape events from cinema's. (add it to the other events table + new column:'type') ✓
+    - translate it into TB table (weekly) without creating doubles. ✓
     - scraping happens only once a week or something like that. (HOW?)
-    - print scraped events together with other events onto the home page (in chronological order).
+    - print scraped events together with other events onto the home page.
 
 ## Version 2.0 (COMING SOON) 🌼
 As a user:
@@ -25,7 +25,7 @@ As a user:
 
 EXTRA: Add a manifesto to the website.
 
-# Version 2.1 
+### Version 2.1 
 1. Refactoring
 2. Make past events delete and be stored in an archive table (with less information for example)
 
@@ -37,4 +37,5 @@ As a user:
 
 
 ## OTHER IDEAS / POSSIBLE UPGRADES
-Eventform with possibility to change the organisation name
+- Eventform with possibility to change the organisation name.
+- show events in chronological order and delete/archive(?) old events.
