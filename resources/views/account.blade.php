@@ -17,7 +17,12 @@
         <a href="/create-event">Create an event</a>
         <h2>Saved events</h2>
         @foreach ($saves as $save)
-            <p>{{$save->title}}</p>
+            <p>{{$save[0]->title}}</p>
+            <form action="/account/unsave/{{$save[0]->id}}" method="post">
+                @csrf
+                @method('PUT')
+                <button>Unsave event</button>
+            </form>
         @endforeach
         <h2>Your events</h2>
         @foreach ($events as $event)

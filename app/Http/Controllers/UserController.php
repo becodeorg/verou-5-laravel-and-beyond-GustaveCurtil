@@ -59,4 +59,23 @@ class UserController extends Controller
 
         return redirect('/');
     }
+
+    public function unsaveEvent(Event $event) {
+        $this->unsave($event);
+        return redirect('/');
+    }
+
+    public function unsaveAccountEvent(Event $event) {
+        $this->unsave($event);
+        return redirect('/account');
+    }
+
+    static function unsave($event){
+        $user = User::find(Auth::id());
+        $saves = $user->saves;
+        $saves = array_diff($saves, [$event->id]);
+        $user->saves = $saves;
+        $user->save();
+        $user->refresh();
+    }
 }

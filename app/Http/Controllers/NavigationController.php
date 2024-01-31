@@ -43,8 +43,9 @@ class NavigationController extends Controller
             $event = Event::where('id', $save)->get();
             array_push($savedEvents, $event);
         }
+
         
-        return view('/account', ['events' => $events, 'saves' => $savedEvents[0]]);
+        return view('/account', ['events' => $events, 'saves' => $savedEvents]);
     }
 
     public function goToEventEdit(Event $event) {

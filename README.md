@@ -19,9 +19,9 @@ As a user:
 1. Save events you like and find them back on your personal page.
     - Users column: saves (an array with event_id's?). ✓
     - When clicked on save -> add to array ✓
-    - ... & the other way around: unsave
+    - ... & the other way around: unsave ✓ 
     - Display saved events on personal page. ✓
-    (- When a event is deleted, remove it also from the saves(?)) <-- NOT SO NESCESARY, it will not be displayed anyways...
+    - When a event is deleted, remove it also from the saves ✓
 2. Make use of components and stuff to make the pages more dynamic...
     - in account.blade: make saves be events and events be yourevents so that i can use a component for the events dipslayed in the home page and in the saved events (same layout).
 3. Some basic styling

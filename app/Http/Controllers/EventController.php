@@ -42,7 +42,7 @@ class EventController extends Controller
     }
 
     public function deleteEvent(Event $event) {
-
+        UserController::unsave($event);
         $event->delete();
         return redirect('/account');
     }
